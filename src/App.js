@@ -1,23 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Counter from "./Counter";
+import GetTime from './GetTime';
 import './App.css';
 
-function App() {
+const App = () => {
+  const current = new Date().toLocaleTimeString()
+  const [currentTime, setCurrentTime] = useState(current);
+
+  const getCurrentTime = () => {
+    let determineTime = new Date().toLocaleTimeString();    
+    setCurrentTime(determineTime)  
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <Counter />
+       <GetTime time={currentTime} getCurrentTime={getCurrentTime} />
       </header>
     </div>
   );
