@@ -4,7 +4,7 @@ import "./GetTime.css";
 const GetTime = (props) => {
   return (
     <div>
-     <h3>{props.time}</h3> 
+     <h3 style={{color: "white"}}>{props.time}</h3> 
       <button onClick={() => setTimeout(props.getCurrentTime, 2000)}>GET CURRENT TIME</button>
     </div>
   )

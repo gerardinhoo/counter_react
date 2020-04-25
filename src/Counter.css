@@ -1,4 +1,4 @@
-.counter-button > button {
+.counter-button button {
   background-color: #e74c3c;
   color: white;
   padding: 1rem;
@@ -7,4 +7,13 @@
 }
 h1 {
   font-size: 6rem;
+  color: white
+}
+
+.counter-button .disableOption {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
+  font-size: 1rem;
 }
